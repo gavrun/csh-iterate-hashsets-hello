@@ -83,3 +83,17 @@ fragrances =
     {C, D}, {A, C, D}, {B, C, D}, {A, B, C, D}
 }
 ```
+
+### Дополнительно, псевдокод для (power set) набора элементов с использованием рекурсии:
+
+```
+function recursive_power_set(items)
+    ps = copy of items  // Копируем текущие элементы
+    for each e in items do
+        ps = ps without e  // Удаляем элемент e из множества ps
+        ps = ps + recursive_power_set(ps)  // Рекурсивно добавляем подмножества без элемента e
+        ps = ps + {e}  // Добавляем обратно элемент e в подмножества
+    end for
+    return ps  // Возвращаем итоговое множество всех подмножеств
+end function
+```
