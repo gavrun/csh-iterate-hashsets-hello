@@ -30,18 +30,4 @@ public class RecursivePowerSetGenerator
 
         return ps;
     }
-
-    public static void Main(string[] args)
-    {
-        // Пример использования функции для множества {A, B, C}
-        List<string> items = new List<string> { "A", "B", "C" };
-        List<List<string>> powerSet = RecursivePowerSet(items);
-
-        // Выводим результат
-        Console.WriteLine("Power set:");
-        foreach (var subset in powerSet)
-        {
-            Console.WriteLine("{" + string.Join(", ", subset) + "}");
-        }
-    }
 }
